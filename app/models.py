@@ -19,8 +19,7 @@ if not parent_dir in sys.path:
 
 # Now, with a relative path, import is available.
 # (이제 상대경로로 import가 가능합니다.)
-from app import mongo  # mongo 변수를 __init__.py에서 가져옴
-
+from .mongo import mongo
 from pymongo import MongoClient
 from constants import *
 

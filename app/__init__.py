@@ -6,7 +6,7 @@ from flask_login import LoginManager
 from bson.objectid import ObjectId
 
 # User 모델과 로딩 함수를 MongoDB 스키마에 맞게 수정해야 함
-from .models import User
+from .mongo import mongo
 from .constants import *
 
 # DB Specification(Mongo DB)
@@ -25,7 +25,10 @@ app.config['MONGO_URI'] = os.getenv('MONGO_URI', f'mongodb://{DB_DOMAIN_NAME}:{D
 # from flask_cors import CORS
 # CORS(app)
 
-mongo = PyMongo(app)
+# mongo = PyMongo(app)
+mongo.init_app(app)
+from app import routes, models  # 나머지 import는 나중에
+from .models import User
 
 # Member manage module 
 
