@@ -3,6 +3,9 @@ pip install Flask-Cors
 pip install Flask-Login
 pip install Flask_PyMongo
 
+//WSGI Sever operation, not development server
+pip install gunicorn
+
 (py_venv) root@ubuntu1:~/my_dev/flask_template# pip install Flask
 Collecting Flask
   Using cached flask-3.0.3-py3-none-any.whl (101 kB)
@@ -102,3 +105,14 @@ Collecting dnspython<3.0.0,>=1.16.0
 Requirement already satisfied: MarkupSafe>=2.0 in ./py_venv/lib/python3.10/site-packages (from Jinja2>=3.1.2->Flask>=0.11->Flask-PyMongo) (2.1.5)
 Installing collected packages: dnspython, PyMongo, Flask-PyMongo
 Successfully installed Flask-PyMongo-2.3.0 PyMongo-4.8.0 dnspython-2.6.1
+
+
+
+(py_venv) root@ubuntu1:~/my_dev/flask_template# pip install gunicorn
+Collecting gunicorn
+  Downloading gunicorn-23.0.0-py3-none-any.whl (85 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.0/85.0 KB 746.6 kB/s eta 0:00:00
+Collecting packaging
+  Using cached packaging-24.1-py3-none-any.whl (53 kB)
+Installing collected packages: packaging, gunicorn
+Successfully installed gunicorn-23.0.0 packaging-24.1
